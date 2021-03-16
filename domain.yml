@@ -96,6 +96,8 @@ intents:
     use_entities: true
 - nlu_fallback:
     use_entities: true
+- trigger_response_selector:
+    use_entities: false
 entities:
 - amount-of-money
 - company
@@ -112,7 +114,11 @@ entities:
 - product
 - user_type
 - install_type
+- retrieval_intent
 slots:
+  retrieval_intent:
+    type: text
+    influence_conversation: false
   budget:
     type: rasa.shared.core.slots.AnySlot
     initial_value: null
@@ -233,7 +239,7 @@ slots:
     type: rasa.shared.core.slots.AnySlot
     initial_value: null
     auto_fill: true
-    influence_conversation: false
+    influence_conversation: true
   step:
     type: rasa.shared.core.slots.AnySlot
     initial_value: null
@@ -332,16 +338,21 @@ responses:
   - text: What's your name?
   utter_ask_person_name:
   - text: What's your name?
-  utter_ask_intro:
-  - text: To help you best, I'd like to ask you a few questions about what brings you here.
   utter_playground_intro:
   - text: |-
         In the [Rasa Playground](https://rasa.com/docs/rasa/playground) you can
           build a Rasa prototype entirely online. Once you've built your prototype, you can talk to
           your bot online and download your project to continue developing it locally.
-  utter_ask_playground_or_install:
-  - text: Would you like to try out Rasa in the online Rasa Playground or do you want to install Rasa on your own computer?
-  utter_ask_playground_help:
+  utter_ask_playground_install_info:
+  - text: Which would you like to do first?
+    buttons:
+    - payload: /playground
+      title: Try out Rasa in the online Rasa Playground
+    - payload: /install_rasa
+      title: Install Rasa on your own computer
+    - payload: /trigger_response_selector{"retrieval_intent":"chitchat/ask_whatisrasa"}
+      title: Find out more about Rasa
+
   - text: Do you have any questions or issues you're running into with Rasa Playground?
   utter_ask_use_case:
   - text: What kind of assistant do you want to build with Rasa?
@@ -602,16 +613,8 @@ responses:
   - text: 👏
   - text: 😍
   utter_reasons_to_contribute:
-<<<<<<< HEAD
-  - text: |
-      Here a few reasons why you should contribute:
-      - Explore the source code in depth
-      - Contribute to open source software
-      - Earn [Rasa swag])(https://rasa.com/community/contribute/)!
-=======
   - text: "Here a few reasons why you should contribute:\n- Explore the source code\
       \ in depth\n- Contribute to open source software\n- Earn [Rasa swag](https://rasa.com/community/contribute/)!\n"
->>>>>>> 9502f212f6c4af2d84615e2a853e3b3dc65cdd43
   utter_recommend_forum:
   - text: You should join the [Rasa Community forum](https://forum.rasa.com), where you can ask questions about Rasa Open Source and Rasa X, find resources, and stay up-to-date with what's happening at Rasa.
   utter_response_why_email:
@@ -691,6 +694,7 @@ responses:
   utter_why_rasa_compliant:
   - text: If data security and compliance is a priority for you, Rasa has your back! You can deploy Rasa either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
+- action_trigger_response_selector
 - action_default_ask_affirmation
 - action_default_fallback
 - action_docs_search

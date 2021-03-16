@@ -14,8 +14,6 @@ stories:
   steps:
   - intent: greet
   - action: action_greet_user
-  - slot_was_set:
-    - shown_privacy: true
   - intent: nlu_generation_tool_recommendation
     entities:
     - product: nlu

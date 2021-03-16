@@ -63,3 +63,21 @@ rules:
   - action: utter_anything_else
   - intent: affirm
   - action: utter_what_help
+
+- rule: Getting started with Rasa playground
+  conversation_start: true
+  steps:
+  - intent: how_to_get_started
+  - action: utter_greet
+  - action: utter_ask_playground_install_info
+
+- rule: Getting started with Rasa playground
+  conversation_start: false
+  steps:
+  - intent: how_to_get_started
+  - action: utter_ask_playground_install_info
+
+- rule: Trigger response selector from button payload
+  steps:
+  - intent: trigger_response_selector
+  - action: action_trigger_response_selector
