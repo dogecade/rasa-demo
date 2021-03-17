@@ -445,8 +445,6 @@ class ActionGreetUser(Action):
         intent = tracker.latest_message["intent"].get("name")
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
-        if intent == "next_step":
-            intent = "get_started_step1"
         if intent == "greet" or (intent == "enter_data" and name_entity):
             if shown_privacy and name_entity and name_entity.lower() != "sara":
                 dispatcher.utter_message(template="utter_greet_name", name=name_entity)
@@ -457,16 +455,7 @@ class ActionGreetUser(Action):
             else:
                 dispatcher.utter_message(template="utter_greet")
                 dispatcher.utter_message(template="utter_inform_privacypolicy")
-                dispatcher.utter_message(template="utter_ask_goal")
                 return [SlotSet("shown_privacy", True)]
-        elif intent[:-1] == "get_started_step" and not shown_privacy:
-            dispatcher.utter_message(template="utter_greet")
-            dispatcher.utter_message(template="utter_inform_privacypolicy")
-            dispatcher.utter_message(template=f"utter_{intent}")
-            return [SlotSet("shown_privacy", True), SlotSet("step", intent[-1])]
-        elif intent[:-1] == "get_started_step" and shown_privacy:
-            dispatcher.utter_message(template=f"utter_{intent}")
-            return [SlotSet("step", intent[-1])]
         return []
 
 
@@ -684,30 +673,6 @@ class CommunityEventAction(Action):
         dispatcher.utter_message(
             text=f"{header} \n\n {events} \n\n We hope to see you there!"
         )
-
-
-class ActionNextStep(Action):
-    def name(self) -> Text:
-        return "action_next_step"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[EventType]:
-        if tracker.get_slot("step"):
-            step = int(tracker.get_slot("step")) + 1
-
-            if step in [2, 3, 4]:
-                dispatcher.utter_message(template=f"utter_continue_step{step}")
-            else:
-                dispatcher.utter_message(template="utter_no_more_steps")
-
-            return []
-
-        else:
-            return [FollowupAction("action_greet_user")]
 
 
 def get_last_event_for(tracker, event_type: Text, skip: int = 0) -> Optional[EventType]:

@@ -582,7 +582,7 @@ stories:
 - story: Story from conversation with cdd14d763a664a5b95e998ce165bd86f on December 16th 2018
   steps:
   - intent: get_started_step1
-  - action: action_greet_user
+  - action: utter_get_started_step1
   - intent: enter_data
   - action: utter_not_sure
   - action: utter_possibilities
@@ -608,7 +608,7 @@ stories:
 - story: Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
   steps:
   - intent: get_started_step1
-  - action: action_greet_user
+  - action: utter_get_started_step1
   - intent: chitchat
   - action: utter_chitchat
   - intent: chitchat
@@ -619,7 +619,7 @@ stories:
 - story: Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
   steps:
   - intent: get_started_step1
-  - action: action_greet_user
+  - action: utter_get_started_step1
   - intent: chitchat
   - action: utter_chitchat
   - intent: chitchat
@@ -636,7 +636,7 @@ stories:
 - story: Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
   steps:
   - intent: get_started_step1
-  - action: action_greet_user
+  - action: utter_get_started_step1
   - intent: chitchat
   - action: utter_chitchat
   - intent: chitchat
@@ -656,7 +656,7 @@ stories:
 - story: Story from conversation with 030829eb30ed4339985d7e71737f6c2d on January 1st 2019
   steps:
   - intent: get_started_step1
-  - action: action_greet_user
+  - action: utter_get_started_step1
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -681,7 +681,7 @@ stories:
 - story: Story from conversation with e977c395a2404bef8ba7f0c3b7e65970 on January 8th 2019
   steps:
   - intent: get_started_step1
-  - action: action_greet_user
+  - action: utter_get_started_step1
   - intent: enter_data
   - action: utter_not_sure
   - action: utter_possibilities
@@ -711,7 +711,7 @@ stories:
 - story: Story from conversation with 602ddccbe2de4f46822e06e2781cf02d on January 8th 2019
   steps:
   - intent: get_started_step1
-  - action: action_greet_user
+  - action: utter_get_started_step1
   - intent: greet
   - action: action_greet_user
   - intent: out_of_scope
@@ -724,7 +724,7 @@ stories:
 - story: Story from conversation with 4cdb0b3c6f6c4b3694fcb311ae72743b on January 21st 2019
   steps:
   - intent: get_started_step1
-  - action: action_greet_user
+  - action: utter_get_started_step1
   - slot_was_set:
     - step: '1'
   - intent: affirm
@@ -753,7 +753,7 @@ stories:
 - story: Story from conversation with 4b7ecc2cab6e42c5b1fedb8ab4056866 on December 29th 2018
   steps:
   - intent: get_started_step1
-  - action: action_greet_user
+  - action: utter_get_started_step1
   - intent: chitchat
   - action: utter_chitchat
   - intent: chitchat
@@ -769,7 +769,7 @@ stories:
 - story: Story from conversation with af5a6b3c39d04c6db2b682960e63f01c on January 21st 2019
   steps:
   - intent: get_started_step1
-  - action: action_greet_user
+  - action: utter_get_started_step1
   - slot_was_set:
     - step: '1'
   - intent: greet
@@ -795,7 +795,7 @@ stories:
 - story: Story from conversation with af5a6b3c39d04c6db2b682960e63f01c on January 21st 2019
   steps:
   - intent: get_started_step1
-  - action: action_greet_user
+  - action: utter_get_started_step1
   - slot_was_set:
     - step: '1'
   - intent: greet
@@ -819,7 +819,7 @@ stories:
 - story: Story from conversation with 53d4ca53494d4469b7d94aca2f7b3fec on January 21st 2019
   steps:
   - intent: get_started_step1
-  - action: action_greet_user
+  - action: utter_get_started_step1
   - slot_was_set:
     - step: '1'
   - intent: greet
@@ -858,7 +858,7 @@ stories:
 - story: Story from conversation with 5f3a2ea92d184a9f96df7240e4f7e2d9 on January 21st 2019
   steps:
   - intent: get_started_step1
-  - action: action_greet_user
+  - action: utter_get_started_step1
   - slot_was_set:
     - step: '1'
   - intent: how_to_get_started
@@ -880,7 +880,7 @@ stories:
 - story: Story from conversation with ced8c1eb9a8d485f88a02d931b2879bd on January 16th 2019
   steps:
   - intent: get_started_step4
-  - action: action_greet_user
+  - action: utter_get_started_step4
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
