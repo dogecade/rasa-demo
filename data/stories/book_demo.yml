@@ -7,7 +7,6 @@ stories:
 - story: Story from Conversation ID d3e170ca24e74784acbef03e5db050ca
   steps:
   - intent: how_to_get_started
-  - action: utter_greet
   - action: utter_ask_playground_install_info
   - intent: install_rasa
     entities:

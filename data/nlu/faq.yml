@@ -1,6 +1,7 @@
 version: "2.0"
 nlu:
 - intent: faq/components
+  examples: |
     - what are the components of rasa
     - What components does Rasa have?
     - What are the two components that make up [Rasa Open Source](product)?

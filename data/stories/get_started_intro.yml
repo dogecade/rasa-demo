@@ -4,7 +4,6 @@ stories:
 - story: Getting started with Rasa playground
   steps:
   - intent: how_to_get_started
-  - action: utter_greet
   - action: utter_ask_playground_install_info
   - intent: affirm
   - action: utter_what_help
@@ -12,20 +11,18 @@ stories:
 - story: Getting started with Rasa playground
   steps:
   - intent: how_to_get_started
-  - action: utter_greet
   - action: utter_ask_playground_install_info
   - intent: faq
     entities:
     - product: playground
   - slot_was_set:
     - product: playground
-  - action: utter_faq
+  - action: utter_playground_intro
   - action: action_set_faq_slot
 
 - story: Getting started with Rasa Open Source installation
   steps:
   - intent: how_to_get_started
-  - action: utter_greet
   - action: utter_ask_playground_install_info
   - intent: install_rasa
   - action: utter_installation_command
@@ -35,7 +32,6 @@ stories:
 - story: Getting started with Rasa Open Source installation
   steps:
   - intent: how_to_get_started
-  - action: utter_greet
   - action: utter_ask_playground_install_info
   - intent: install_rasa
   - action: utter_installation_command
@@ -45,7 +41,6 @@ stories:
 - story: Getting started with Rasa X local mode installation
   steps:
   - intent: how_to_get_started
-  - action: utter_greet
   - action: utter_ask_playground_install_info
   - intent: install_rasa
     entities:
@@ -64,7 +59,6 @@ stories:
 - story: Getting started with Rasa X local mode installation
   steps:
   - intent: how_to_get_started
-  - action: utter_greet
   - action: utter_ask_playground_install_info
   - intent: install_rasa
     entities:
@@ -83,7 +77,6 @@ stories:
 - story: Getting started with Rasa X server installation
   steps:
   - intent: how_to_get_started
-  - action: utter_greet
   - action: utter_ask_playground_install_info
   - intent: install_rasa
     entities:
@@ -101,7 +94,6 @@ stories:
 - story: Getting started with Starter Packs
   steps:
   - intent: how_to_get_started
-  - action: utter_greet
   - action: utter_ask_playground_install_info
   - intent: deny
   - action: utter_interested_in_starter_packs
@@ -112,7 +104,6 @@ stories:
 - story: Catch-all case of getting started
   steps:
   - intent: how_to_get_started
-  - action: utter_greet
   - action: utter_ask_playground_install_info
   - intent: deny
   - action: utter_interested_in_starter_packs
@@ -123,7 +114,6 @@ stories:
 - story: Getting started with Rasa playground
   steps:
   - intent: how_to_get_started
-  - action: utter_greet
   - action: utter_ask_playground_install_info
   - intent: faq
     entities:
