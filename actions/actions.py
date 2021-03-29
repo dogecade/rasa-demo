@@ -95,7 +95,11 @@ class ActionSubmitSalesForm(Action):
 
         try:
             gdrive_client = GDriveService()
-            gdrive_client.store_data(sales_info)
+            gdrive_client.append_row(
+                gdrive_client.SALES_SPREADSHEET_NAME,
+                gdrive_client.SALES_WORKSHEET_NAME,
+                sales_info,
+            )
             dispatcher.utter_message(template="utter_confirm_salesrequest")
             return []
         except Exception as e:
@@ -383,7 +387,9 @@ class ActionSubmitPlaygroundProblemDescription(Action):
 
         gdrive = GDriveService()
         gdrive.append_row(
-            gdrive.ISSUES_SPREADSHEET_NAME, gdrive.PLAYGROUND_WORKSHEET_NAME, row_values
+            gdrive.PLAYGROUND_ISSUES_SPREADSHEET_NAME,
+            gdrive.PLAYGROUND_WORKSHEET_NAME,
+            row_values,
         )
 
         return [SlotSet("problem_description", problem)]

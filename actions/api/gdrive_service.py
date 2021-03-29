@@ -22,7 +22,7 @@ class GDriveService:
     SALES_WORKSHEET_NAME = "demobot"
 
     # Name of the playground issues spreadsheet
-    ISSUES_SPREADSHEET_NAME = "Issues Reported to Sara"
+    PLAYGROUND_ISSUES_SPREADSHEET_NAME = "Issues Reported to Sara"
 
     # Name of the playground issues sheet
     PLAYGROUND_WORKSHEET_NAME = "playground"
@@ -41,7 +41,6 @@ class GDriveService:
                 f.name, scopes=scopes
             )
 
-            
     def request_spreadsheet(self, spreadsheet_name: Text) -> Optional[Spreadsheet]:
         # fetch a specific spreadsheet
         logging.debug("Refreshing auth")
@@ -53,13 +52,6 @@ class GDriveService:
             )
             return None
 
-
-    def store_data(self, data: List[Text]) -> None:
-        """Add a single new row to the worksheet containing the user's
-        information"""
-        self.append_row(self.SPREADSHEET_NAME, self.WORKSHEET_NAME, data)
-
-        
     def append_row(
         self, spreadsheet_name: Text, worksheet_name: Text, row_values: List[Text]
     ) -> None:
