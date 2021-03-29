@@ -1,10 +1,12 @@
 version: "2.0"
 rules:
+
 - rule: why rasa
   steps:
   - intent: why_rasa
   - action: utter_why_rasa
   - action: utter_ask_more
+
 - rule: why rasa
   steps:
   - intent: why_rasa
@@ -14,6 +16,7 @@ rules:
     - current_api: __other__
   - action: utter_why_rasa
   - action: utter_ask_more
+
 - rule: why rasa
   steps:
   - intent: why_rasa
@@ -24,6 +27,7 @@ rules:
   - action: utter_why_rasa
   - action: utter_switch_luis
   - action: utter_ask_more_migrate
+
 - rule: why rasa
   steps:
   - intent: why_rasa
@@ -34,10 +38,12 @@ rules:
   - action: utter_why_rasa
   - action: utter_switch_dialogflow
   - action: utter_ask_more_migrate
+
 - rule: ask for more details
   steps:
   - intent: need_help_broad
   - action: utter_ask_more_details
+
 - rule: sales -> need_help_broad -> deactivate loop
   condition:
   - active_loop: sales_form
@@ -46,6 +52,7 @@ rules:
   - action: action_deactivate_loop
   - active_loop: null
   - action: utter_ask_more_details
+
 - rule: newsletter -> need_help_broad -> deactivate loop
   condition:
   - active_loop: subscribe_newsletter_form
@@ -54,26 +61,28 @@ rules:
   - action: action_deactivate_loop
   - active_loop: null
   - action: utter_ask_more_details
+
 - rule: anything else? - yes
   steps:
   - action: utter_anything_else
   - intent: affirm
   - action: utter_what_help
 
-- rule: Getting started with Rasa playground
-  conversation_start: true
-  steps:
-  - intent: how_to_get_started
-  - action: action_greet_user
-  - action: utter_ask_playground_install_info
-
-- rule: Getting started with Rasa playground
-  steps:
-  - intent: how_to_get_started
-  - action: utter_ask_playground_install_info
+# - rule: Getting started with Rasa playground
+#   conversation_start: true
+#   steps:
+#   - intent: how_to_get_started
+#   - action: action_greet_user
+#   - action: utter_ask_playground_install_info
 
 - rule: Trigger response selector from button payload
   steps:
   - intent: trigger_response_selector
   - action: action_trigger_response_selector
   wait_for_user_input: false
+
+- rule: Getting started on Playground Page
+  steps:
+  - intent: get_started_playground
+  - action: utter_faq/rasa_playground
+  - action: utter_ask_playground_help

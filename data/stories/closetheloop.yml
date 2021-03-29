@@ -394,21 +394,23 @@ stories:
   - action: utter_built_bot_before
   - intent: deny
   - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
+  - action: utter_faq/rasa_components
+  - action: utter_ask_explain_nlu_dialogue_management_x
+  - intent: faq
     entities:
-    - product: core
+    - product: dialogue management
   - slot_was_set:
-    - product: core
-  - action: utter_explain_core
+    - product: dialogue management
+  - action: utter_faq
+  - action: action_set_faq_slot
   - action: utter_also_explain_nlu
-  - intent: how_to_get_started
+  - intent: faq
     entities:
-    - product: core
+    - product: dialogue management
   - slot_was_set:
-    - product: core
-  - action: utter_explain_core
+    - product: dialogue management
+  - action: utter_faq
+  - action: action_set_faq_slot
 - story: Story from conversation with 7830abb04e1c49809d89b0d420443928 on November 19th 2018
   steps:
   - intent: greet
@@ -420,13 +422,11 @@ stories:
   - action: utter_possibilities
   - intent: chitchat
   - action: utter_chitchat
-  - intent: how_to_get_started
+  - intent: faq
     entities:
     - product: nlu
-  - intent: trigger_response_selector
-    entities:
-    - retrieval_intent: chitchat/ask_whatisrasa
-  - action: action_trigger_response_selector
+  - action: utter_faq
+  - action: action_set_faq_slot
   - action: utter_first_bot_with_rasa
 - story: Story from conversation with 29d264d8ce574a11bde572f0e79b73f3 on November 19th 2018
   steps:
@@ -527,19 +527,21 @@ stories:
     - current_api: luis
   - action: utter_switch_luis
   - action: utter_anything_else
-  - intent: how_to_get_started
+  - intent: faq
     entities:
-    - product: core
+    - product: dialogue management
   - slot_was_set:
-    - product: core
-  - action: utter_explain_core
+    - product: dialogue management
+  - action: utter_faq
+  - action: action_set_faq_slot
   - action: utter_anything_else
-  - intent: how_to_get_started
+  - intent: faq
     entities:
     - product: nlu
   - slot_was_set:
     - product: nlu
-  - action: utter_explain_nlu
+  - action: utter_faq
+  - action: action_set_faq_slot
   - action: utter_anything_else
 - story: Story from conversation with dominik
   steps:
@@ -588,34 +590,12 @@ stories:
   - slot_was_set:
     - onboarding: false
   - action: utter_ask_which_product
-  - intent: how_to_get_started
+  - intent: faq
     entities:
-    - product: core
-  - action: utter_explain_core
+    - product: dialogue management
+  - slot_was_set:
+    - product: dialogue management
+  - action: utter_faq
+  - action: action_set_faq_slot
   - action: utter_anything_else
-- story: Story from conversation with 201bb55841154f858f524a485f8816c3 on November 18th 2018
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-    entities:
-    - product: nlu
-  - intent: trigger_response_selector
-    entities:
-    - retrieval_intent: chitchat/ask_whatisrasa
-  - action: action_trigger_response_selector
-  - action: utter_first_bot_with_rasa
-- story: Story from conversation with cd483ab3456d47dfb40bd1f51043fb54 on November 18th 2018
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-    entities:
-    - product: core
-  - intent: trigger_response_selector
-    entities:
-    - retrieval_intent: chitchat/ask_whatisrasa
-  - action: action_trigger_response_selector
-  - action: utter_first_bot_with_rasa
+

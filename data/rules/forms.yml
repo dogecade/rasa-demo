@@ -134,15 +134,15 @@ rules:
   - action: action_set_faq_slot
   - action: utter_ask_continue_newsletter
 
-- rule: Rasa Core faq in newsletter form
+- rule: Rasa dialogue management faq in newsletter form
   condition:
   - active_loop: subscribe_newsletter_form
   steps:
   - intent: faq
     entities:
-    - product: core
+    - product: dialogue management
   - slot_was_set:
-    - product: core
+    - product: dialogue management
   - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_continue_newsletter
@@ -279,15 +279,15 @@ rules:
   - action: action_set_faq_slot
   - action: utter_ask_continue_sales
 
-- rule: Rasa Core faq in sales form
+- rule: Rasa dialogue management faq in sales form
   condition:
   - active_loop: sales_form
   steps:
   - intent: faq
     entities:
-    - product: core
+    - product: dialogue management
   - slot_was_set:
-    - product: core
+    - product: dialogue management
   - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_continue_sales
@@ -307,3 +307,21 @@ rules:
   - intent: out_of_scope
   - action: utter_out_of_scope
   - action: utter_ask_continue_sales
+
+- rule: activate playground issues form
+  steps:
+  - intent: broken
+  - action: playground_form
+  - active_loop: playground_form
+
+- rule: submit playground issues form
+  condition:
+  - active_loop: playground_form
+  steps:
+  - action: playground_form
+  - active_loop: playground_form
+  - active_loop: null
+  - action: action_submit_playground_problem_description
+  - slot_was_set:
+    - problem_description: anything
+  - action: utter_direct_to_forum_for_help

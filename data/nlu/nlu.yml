@@ -1197,8 +1197,27 @@ nlu:
     - [my machine](install_type)
     - [my laptop](install_type)
     - [local machine](install_type)
-- intent: how_to_build_bot
-  examples: |
+    - [core](product)
+    - [core](product) please
+    - [Core](product)
+    - Rasa [Core](product)
+    - Rasa [core](product)
+    - rasa [core](product)
+    - Only [NLU](product)
+    - RASA [NLU](product)
+    - Rasa [NLU](product)
+    - [nlu](product)
+    - [nlu](product) part
+    - [NLU](product)
+    - and rasa [nlu](product)?
+    - rasa [nlu](product)
+    - just Rasa [NLU](product)
+    - just [NLU](product)
+    - just rasa [nlu](product)
+    - [Rasa Playground](product)
+    - [interactive playground](product)
+    - [rasa playground](product)
+    - [Rasa X](product)
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -1268,11 +1287,9 @@ nlu:
     - can i try it out
     - can u teach me
     - can you explain how can i make chatbot like you
-    - can you explain rasa [core](product)
     - can you guide me know to create knowledge base chatbot
     - can you help me build a chatbot
     - can you help me get started?
-    - can you help me with the rasa [core](product) ?
     - do you know how to set up a chatbot?
     - find out how to get started with Rasa
     - from where I should start?
@@ -1296,7 +1313,6 @@ nlu:
     - how can i get started with rasa
     - how can i get started?
     - how can i start
-    - how can i start with rasa [core](product)?
     - how cna i get started with rasa
     - how do I build a bot?
     - how do I get started
@@ -1318,6 +1334,7 @@ nlu:
     - how do i get started with rasa myself?
     - how do i get started?
     - how do i learn rasa [core](product)
+    - how can i start with rasa [core](product)?
     - how do i set up a chatbot?
     - how do i sstart
     - how do i start
@@ -2190,10 +2207,14 @@ nlu:
 - synonym: all
   examples: |
     - both
-- synonym: core
+- synonym: dialogue management
   examples: |
     - CORE
     - Core
+    - core
+    - Dialogue management
+    - Dialogue Management
+    - DIALOGUE MANAGEMENT
 - synonym: custom actions
   examples: |
     - Actions

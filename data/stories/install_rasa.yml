@@ -58,7 +58,7 @@ stories:
 - story: Local Rasa X installation
   steps:
   - action: utter_ask_x_local_server
-  - intent: faq
+  - intent: enter_data
     entities:
     - install_type: local
   - slot_was_set:
@@ -68,7 +68,7 @@ stories:
 - story: Server Rasa X installation
   steps:
   - action: utter_ask_x_local_server
-  - intent: faq
+  - intent: install_rasa
     entities:
     - install_type: server
   - slot_was_set:
@@ -107,7 +107,7 @@ stories:
   - or:
     - intent: technical_question
     - intent: enter_data
-    - intent: out_of_scope
+    # - intent: out_of_scope
   - action: action_store_problem_description
   - slot_was_set:
     - problem_description: I don't know how to customize the pipeline
@@ -125,7 +125,7 @@ stories:
   - or:
     - intent: technical_question
     - intent: enter_data
-    - intent: out_of_scope
+    # - intent: out_of_scope
   - action: action_store_problem_description
   - slot_was_set:
     - problem_description: I don't know how to customize the pipeline
@@ -143,7 +143,7 @@ stories:
   - or:
     - intent: technical_question
     - intent: enter_data
-    - intent: out_of_scope
+    # - intent: out_of_scope
   - action: action_store_problem_description
   - action: utter_direct_to_forum_for_help
   - action: utter_run_rasa_init
@@ -157,7 +157,7 @@ stories:
   - or:
     - intent: technical_question
     - intent: enter_data
-    - intent: out_of_scope
+    # - intent: out_of_scope
   - action: action_store_problem_description
   - action: utter_direct_to_forum_for_help
   - action: utter_run_rasa_init

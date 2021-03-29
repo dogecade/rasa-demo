@@ -104,6 +104,9 @@ entities:
 - install_type
 - retrieval_intent
 slots:
+  user_type:
+    type: text
+    influence_conversation: false
   retrieval_intent:
     type: text
     influence_conversation: false
@@ -209,7 +212,7 @@ slots:
     auto_fill: true
     influence_conversation: true
     values:
-    - core
+    - dialogue management
     - nlu
     - x
     - rasa
@@ -261,12 +264,12 @@ slots:
 responses:
   utter_already_subscribed:
   - text: Looks like {email} is already subscribed - good choice! If you haven't received a newsletter in a while, maybe check your spam folder 🗑
-  utter_also_explain_core:
-  - text: Would you also like me to explain Core?
+  utter_also_explain_dialogue_management:
+  - text: Would you also like me to explain Dialogue Management?
   utter_also_explain_nlu:
   - text: Would you also like me to explain NLU?
-  utter_also_explain_nlucore:
-  - text: Would you also like me to explain NLU and Core?
+  utter_also_explain_nlu_dialogue_management:
+  - text: Would you also like me to explain NLU and Dialogue Management?
   utter_anything_else:
   - text: Is there anything else I can help you with?
   utter_ask_budget:
@@ -292,7 +295,7 @@ responses:
   - text: What's your email address?
   utter_ask_entities:
   - text: What kind of entities do you want to extract?
-  utter_ask_explain_nlucorex:
+  utter_ask_explain_nlu_dialogue_management_x:
   - text: Would you like to know more about Rasa Open Source or Rasa X?
   utter_ask_feedback:
   - buttons:
@@ -319,11 +322,6 @@ responses:
   - text: What's your name?
   utter_ask_person_name:
   - text: What's your name?
-  utter_playground_intro:
-  - text: |-
-        In the [Rasa Playground](https://rasa.com/docs/rasa/playground) you can
-          build a Rasa prototype entirely online. Once you've built your prototype, you can talk to
-          your bot online and download your project to continue developing it locally.
   utter_ask_playground_install_info:
   - text: I'm here to help you get started with Rasa! Which would you like to do first?
     buttons:
@@ -401,25 +399,14 @@ responses:
   - text: We need your business email to contact you afterwards. Otherwise, we cannot help you set up Rasa.
   utter_explain_company:
   - text: Just for completeness.
-  utter_explain_core:
-  - text: |-
-      Core decides what happens next in this conversation. Its machine learning-based dialogue management predicts the next best action based on the input from NLU, the conversation history and your training data.
-      (Example: Core has a confidence of 87% that ask_primary_change is the next best action to confirm with the user if they want to change their primary contact information.)
   utter_explain_job_function:
   - text: Your job function helps us in understanding how we can talk to you best.
-  utter_explain_nlu:
-  - text: |-
-      NLU understands the user’s message based on your previous training data:
-      - Intent classification: Interpreting meaning based on predefined intents (Example: “Please send the confirmation to amy@example.com” is a send_confirmation intent with 93% confidence)
-      - Entity extraction: Recognizing structured data (Example: amy@example.com is an email).
   utter_explain_person_name:
   - text: To be able to contact you later on, we would like to know your name.
   utter_explain_rasa_components:
   - text: Alright, I'll briefly explain the components that make up Rasa then.
   utter_explain_use_case:
   - text: In order to help you best, we need to know what you want to build with Rasa.
-  utter_explain_x:
-  - text: Rasa X is a toolset used to improve contextual assistants built using Rasa Open Source by helping you turn real user conversations into training data. Rasa X includes a user interface and a REST API.
   utter_faq_channels_more:
   - text: Please read our [documentation](https://rasa.com/docs/rasa/user-guide/messaging-and-voice-channels/) for more information.
   utter_faq_languages_more:
@@ -430,7 +417,7 @@ responses:
   - text: Please read our [documentation](https://rasa.com/docs/rasa/core/slots/) for more information.
   utter_faq_voice_more:
   - text: Please read our [documentation](https://rasa.com/docs/rasa/user-guide/messaging-and-voice-channels/) for more information.
-  utter_tutorialnlu:
+  utter_tutorial_nlu:
   - text: Rasa Masterclass episodes 2-4 focus on NLU. Check out episode 2 [here](https://www.youtube.com/watch?v=k5UeywXA28k).
   utter_first_bot_with_rasa:
   - text: Let's go. Are you new to Rasa?
@@ -518,8 +505,6 @@ responses:
   - text: This [page](https://rasa.com/docs/rasa-x/installation-and-setup/install/local-mode) has a guide on how to run Rasa X in local mode.
   utter_rasa_x_server_installation:
   - text: You can install Rasa X on a server using either [Docker-Compose](https://rasa.com/docs/rasa-x/installation-and-setup/install/docker-compose) or [Helm](https://rasa.com/docs/rasa-x/installation-and-setup/install/helm-chart).
-  utter_rasa_components_details:
-  - text: Rasa Open Source is a machine learning framework for automated text and voice-based conversations. Rasa X is a tool that helps you build, improve, and deploy AI Assistants that are powered by the Rasa Open Source framework.
   utter_react_negative:
   - text: 😕
   - text: 😞

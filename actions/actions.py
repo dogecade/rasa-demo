@@ -332,13 +332,13 @@ class ActionSetOnboarding(Action):
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
-        user_type = next(tracker.get_latest_entity_values("user_type"), None)
-        is_new_user = intent == "how_to_get_started" and user_type == "new"
+        user_type = tracker.get_slot("user_type")
+        is_new_user = user_type == "new"
         if intent == "affirm" or is_new_user:
-            return [SlotSet("onboarding", True)]
+            return [SlotSet("onboarding", True), SlotSet("user_type", None)]
         elif intent == "deny":
-            return [SlotSet("onboarding", False)]
-        return []
+            return [SlotSet("onboarding", False), SlotSet("user_type", None)]
+        return [SlotSet("user_type", None)]
 
 
 class ActionSubmitSuggestionForm(Action):

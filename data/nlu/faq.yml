@@ -1,6 +1,6 @@
 version: "2.0"
 nlu:
-- intent: faq/components
+- intent: faq/rasa_components
   examples: |
     - what are the components of rasa
     - What components does Rasa have?
@@ -12,8 +12,6 @@ nlu:
     - the components of rasa
     - want to build a chatbot
     - whar are the components of rasa?
-    - what [rasa_nlu](product)
-    - what about [nlu](product)?
     - what are Rasa's components
     - what are the components of RASA
     - what are the components of Rasa
@@ -39,19 +37,15 @@ nlu:
     - what are the features does rasa have?    
 - intent: faq/dialogue_management
   examples: |
+    - can you help me with the rasa [core](product) ?
+    - can you explain rasa [core](product)
     - what is rasa [core](product)
     - what is rasa [core](product)?
     - what can i build with rasa [core](product)?
     - what is [core](product)
     - what's rasa [core](product)?
     - tell me something about [core](product)
-    - rasa [core](product)
     - rasa [core](product) quickstart
-    - [core](product)
-    - [core](product) please
-    - [Core](product)
-    - Rasa [Core](product)
-    - Rasa [core](product)
     - I want to know more about [core](product)
     - I want know about Rasa [Core](product)
     - About [Core](product)
@@ -59,11 +53,21 @@ nlu:
     - i want to learn about rasa [core](product)
     - i would like more explanation on RASA [Core](product)
     - tell me about Rasa [Core](product)
-    - tell me about Rasa [NLU](product)
+    - what is [dialogue management](product)
+    - tell me about [dialogue management](product)
+    - please explain what is [dialogue management](product)
+    - need to understand [dialogue management](product)
+    - What is [dialogue management](product) ?
+    - explain about the rasa [dialogue management](product)
+    - what does rasa [dialogue management](product) do?
+    - how does [dialogue management](product) work?
+    - how does rasa [dialogue management](product) work?
     - tell me about [core](product)
     - tell me about [core](product) please
 - intent: faq/nlu
   examples: |
+    - what [rasa_nlu](product)
+    - what about [nlu](product)?
     - more about [NLU](product)
     - more about [NLU](product) please
     - more about [nlu](product)
@@ -75,10 +79,6 @@ nlu:
     - what is [nlu](product)
     - what is rasa [nlu](product)?
     - tell me about [nlu](product)
-    - rasa [nlu](product)
-    - just Rasa [NLU](product)
-    - just [NLU](product)
-    - just rasa [nlu](product)
     - i want to know about RASA [Nlu](product)
     - i want to know more about [NLU](product)
     - i want to learn about [nlu](product)
@@ -87,14 +87,7 @@ nlu:
     - I want to know more about [NLU](product)
     - I would like to know more about RASA [NLU](product)
     - More about [NLU](product)
-    - Only [NLU](product)
-    - RASA [NLU](product)
-    - Rasa [NLU](product)
     - Yes, I want to know more about [NLU](product)
-    - [NLU](product)
-    - and rasa [nlu](product)?
-    - [nlu](product)
-    - [nlu](product) part
     - hi, can you help in understanding NLU
     - how about [nlu](product)
     - give me some information on [nlu](product)
@@ -116,9 +109,6 @@ nlu:
     - elaborate on [rasa playground](product)
     - Can you tell me about [rasa playground](product)?
     - I want information about [rasa playground](product)
-    - [Rasa Playground](product)
-    - [interactive playground](product)
-    - [rasa playground](product)
     - Tell me about [rasa playgrounds](product)
     - can someone help me with infos about [rasa playground](product)
     - i want to learn more about [Rasa playground](product)
@@ -151,7 +141,6 @@ nlu:
     - elaborate on [rasa x](product)
     - Can you tell me about [rasa x](product)?
     - I want information about [rasa x](product)
-    - [Rasa X](product)
     - [Rasa X](product) features
     - Tell me about [rasa x](product)
     - can someone help me with infos about [rasa x](product)
@@ -270,7 +259,7 @@ nlu:
     - how big is your community
     - how many forum members do you have
     - how many people are using Rasa
-- intent: faq/differencecorenlu
+- intent: faq/difference_dialogue_management_nlu
   examples: |
     - DIFFERENCES BETWEEN [CORE](product) AND [NLU](product)
     - Do you know the difference between [core](product) and [nlu](product)?
@@ -732,7 +721,7 @@ nlu:
     - where slots getting values
     - which are the slots?
     - which slots are there?
-- intent: faq/tutorialcore
+- intent: faq/tutorial_dialogue_management
   examples: |
     - are there some core tutorials i could look at
     - can you show me a core tutorial
@@ -748,7 +737,7 @@ nlu:
     - i would like to follow a core tutorial
     - please show me a core tutorial
     - rasa core tutorial
-- intent: faq/tutorialnlu
+- intent: faq/tutorial_nlu
   examples: |
     - are there some nlu tutorials i could look at
     - can you show me a nlu tutorial

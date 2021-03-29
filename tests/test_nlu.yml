@@ -35,7 +35,7 @@ nlu:
 - intent: faq/community_size
   examples: |
     - how many people are using Rasa
-- intent: faq/differencecorenlu
+- intent: faq/difference_dialogue_management_nlu
   examples: |
     - what is the main difference between [core](product) and [nlu](product)?
     - How does [core](product) compare to [nlu](product)?
@@ -479,12 +479,10 @@ nlu:
     - How do I get started with [Rasa X]{"entity": "product", "value": "x"}
     - WHAT IS RASA
     - How do I get started with Rasa [NLU]{"entity": "product", "value": "nlu"}
-    - [Both]{"entity": "product", "value": "all"} of them
     - how do i use [core](product)
     - how to start with rasa
     - Help me use [Rasa X](product)
     - how do i get started with [Rasa X]{"entity": "product", "value": "x"}
-    - i want to understand [all](product) the products
     - Help me get started
 - intent: human_handoff
   examples: |
