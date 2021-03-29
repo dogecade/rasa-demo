@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 class GDriveService:
-    """Service to write to a spread sheet in google drive."""
+    """Service to write to a spreadsheet in google drive."""
 
     # Name of the sales inbounds spreadsheet
     SALES_SPREADSHEET_NAME = "Qualify Inbounds"
@@ -41,8 +41,9 @@ class GDriveService:
                 f.name, scopes=scopes
             )
 
-    def request_sheet(self, spreadsheet_name: Text) -> Optional[Spreadsheet]:
-        # fetch a specific sheet
+            
+    def request_spreadsheet(self, spreadsheet_name: Text) -> Optional[Spreadsheet]:
+        # fetch a specific spreadsheet
         logging.debug("Refreshing auth")
         try:
             return gspread.authorize(self.credentials).open(spreadsheet_name)
@@ -52,14 +53,21 @@ class GDriveService:
             )
             return None
 
+
+    def store_data(self, data: List[Text]) -> None:
+        """Add a single new row to the worksheet containing the user's
+        information"""
+        self.append_row(self.SPREADSHEET_NAME, self.WORKSHEET_NAME, data)
+
+        
     def append_row(
         self, spreadsheet_name: Text, worksheet_name: Text, row_values: List[Text]
     ) -> None:
         # add a row to the spreadsheet
-        sheet = self.request_sheet(spreadsheet_name)
-        if sheet:
+        spreadsheet = self.request_spreadsheet(spreadsheet_name)
+        if spreadsheet:
             try:
-                worksheet = sheet.worksheet(worksheet_name)
+                worksheet = spreadsheet.worksheet(worksheet_name)
                 if worksheet:
                     worksheet.append_row(row_values)
             except Exception as e:
