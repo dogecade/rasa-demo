@@ -1,0 +1,85 @@
+rules:
+- rule: faq
+  steps:
+  - intent: faq
+  - action: utter_faq
+  - action: action_set_faq_slot
+  wait_for_user_input: false
+
+- rule: faqs
+  steps:
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_faq
+  - action: action_set_faq_slot
+  wait_for_user_input: false
+
+- rule: faqs
+  steps:
+  - intent: faq
+    entities:
+    - product: rasa
+  - slot_was_set:
+    - product: rasa
+  - action: utter_faq
+  - action: action_set_faq_slot
+  wait_for_user_input: false
+
+- rule: faqs
+  steps:
+  - intent: faq
+    entities:
+    - product: nlu
+  - slot_was_set:
+    - product: nlu
+  - action: utter_faq
+  - action: action_set_faq_slot
+  wait_for_user_input: false
+
+- rule: faqs
+  steps:
+  - intent: faq
+    entities:
+    - product: dialogue management
+  - slot_was_set:
+    - product: dialogue management
+  - action: utter_faq
+  - action: action_set_faq_slot
+  wait_for_user_input: false
+
+- rule: faqs
+  steps:
+  - intent: faq
+    entities:
+    - product: all
+  - slot_was_set:
+    - product: all
+  - action: utter_faq
+  - action: action_set_faq_slot
+  wait_for_user_input: false
+
+- rule: faq playground
+  steps:
+  - intent: faq
+    entities:
+    - product: playground
+  - slot_was_set:
+    - product: playground
+  - action: utter_faq
+  - action: action_set_faq_slot
+  wait_for_user_input: false
+
+- rule: out_of_scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  wait_for_user_input: false
+
+- rule: chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+  wait_for_user_input: false
