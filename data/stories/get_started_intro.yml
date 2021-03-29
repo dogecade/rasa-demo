@@ -129,4 +129,20 @@ stories:
     - product: x
   - action: utter_ask_x_local_server
 
+- story: Getting more info about Rasa
+  steps:
+  - intent: how_to_get_started
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
 

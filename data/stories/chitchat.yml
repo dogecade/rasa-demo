@@ -32,8 +32,10 @@ stories:
   - action: utter_chitchat
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
-  - intent: install_rasa
-  - action: utter_getstarted
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -60,7 +62,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: chitchat
   - action: utter_chitchat
@@ -90,7 +96,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -120,7 +130,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -148,7 +162,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -178,7 +196,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -208,7 +230,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -237,7 +263,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -263,7 +293,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -279,7 +313,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -307,7 +345,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -334,7 +376,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -360,7 +406,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -385,7 +435,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -411,7 +465,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -436,7 +494,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -462,7 +524,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -487,7 +553,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -508,7 +578,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -530,7 +604,11 @@ stories:
   - intent: chitchat
   - action: utter_chitchat
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -544,7 +622,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: chitchat
   - action: utter_chitchat
@@ -561,7 +643,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -578,7 +664,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -600,7 +690,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -626,7 +720,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: chitchat
   - action: utter_chitchat
@@ -650,7 +748,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: chitchat
   - action: utter_chitchat
@@ -680,7 +782,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -704,7 +810,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -731,7 +841,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -766,7 +880,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -804,7 +922,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -838,7 +960,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -874,7 +1000,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -908,7 +1038,11 @@ stories:
 - story: how to get started without privacy policy
   steps:
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: chitchat
   - action: utter_chitchat

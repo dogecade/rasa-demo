@@ -1197,6 +1197,8 @@ nlu:
     - [my machine](install_type)
     - [my laptop](install_type)
     - [local machine](install_type)
+- intent: how_to_build_bot
+  examples: |
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot

@@ -436,8 +436,6 @@ responses:
   - text: Rasa Masterclass episodes 2-4 focus on NLU. Check out episode 2 [here](https://www.youtube.com/watch?v=k5UeywXA28k).
   utter_first_bot_with_rasa:
   - text: Let's go. Are you new to Rasa?
-  utter_getstarted:
-  - text: To determine how I can help you best, I'm going to ask you a few questions.
   utter_getstarted_new:
   - text: I see you’re new, let me ask you a quick question to determine how best I can help you.
   utter_great:
